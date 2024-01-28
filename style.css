@@ -1,0 +1,212 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: black;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background: url(./images/wengang-zhai-MJ_0PxIuquI-unsplash.jpg) no-repeat
+    center;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: "Prompt", sans-serif;
+  color: black;
+}
+
+.container {
+  background: rgba(130, 224, 143, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(12, 76, 20, 0.8);
+  border-top: 1px solid rgba(168, 255, 179, 0.8);
+  overflow-y: auto;
+  height: 70%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container .navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 35px 20px;
+  align-items: center;
+}
+.navigation {
+  transition: opacity 0.3s ease;
+}
+
+.navigation:hover {
+  opacity: 0.7;
+}
+
+.navigation .menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.navigation .menu li {
+  list-style: none;
+  margin: 0 6px;
+}
+
+.navigation .menu a {
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px 40px;
+  font-weight: 550;
+}
+
+.navigation .logo a {
+  font-family: "Prompt", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 20px;
+  color: hsl(161, 85%, 16%);
+}
+
+.container .text__content {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.text__content h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.text__content p {
+  font-size: 20px;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navigation .menu a.active {
+  border-bottom: 2px solid hsl(165, 88%, 16%);
+}
+
+.container .projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.my__project {
+  width: 80%;
+  padding: 20px;
+  margin: 10px;
+  background: rgba(168, 255, 179, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(8, 74, 17, 0.2);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.my__project:hover {
+  box-shadow: 0 0 10px #9eb44e;
+}
+
+.projects img {
+  max-width: 80%;
+  height: 70%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.projects h1 {
+  margin-bottom: 10px;
+}
+
+.projects p {
+  color: #042817;
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container .wrapper {
+  display: flex;
+  width: 80%;
+  margin-top: 40px;
+  justify-content: space-around;
+}
+
+.container .wrapper img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.wrapper .text__content {
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 900px) {
+  .container .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navigation .menu {
+    width: 100%;
+    background: rgba(185, 255, 194, 0.3);
+    backdrop-filter: blur(80px);
+    border-radius: 20px;
+    padding: 20px 20px;
+  }
+
+  .navigation .menu a {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .container .text__content {
+    width: 80%;
+    margin-top: 120px;
+  }
+  .text__content h1 {
+    font-size: 30px;
+  }
+  .text__content p {
+    font-size: 16px;
+  }
+  .navigation .logo a {
+    font-size: 30px;
+  }
+  .container .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .my__project {
+    width: 90%;
+  }
+  .container .wrapper {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 80%;
+    margin-top: 5px;
+  }
+  .container .wrapper img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 20px;
+  }
+  .wrapper .text__content {
+    margin-top: 30px;
+  }
+}
